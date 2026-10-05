@@ -1,4 +1,3 @@
-PRUEBAcat << 'EOF' > Readme.md
 # Documentación Práctica 3 ADBD
 
 ### Descripción de las Entidades
@@ -20,17 +19,17 @@ PRUEBAcat << 'EOF' > Readme.md
 *   **Longitud:** Coordenada geográfica para localizar el vivero. *Dominio:* Número decimal. (Ej: `-16.3159`).
 
 **Entidad: Zona**
-*   **IDZona:** Identificador único de la zona dentro del sistema. *Dominio:* Código alfanumérico. (Ej: `ZON-EXT-01`).
+*   **IDZona:** Identificador único de la zona dentro del sistema. *Dominio:* Código alfanumérico.
 *   **Latitud y Longitud:** Coordenadas específicas de la zona. *Dominio:* Números decimales.
 
 **Entidad: Producto**
-*   **IDProducto:** Código único que identifica al artículo. *Dominio:* Número entero o cadena de texto corta. (Ej: `PROD-9982`).
+*   **IDProducto:** Código único que identifica al artículo. *Dominio:* Número entero o cadena de texto corta.
 
 **Entidad: Empleado**
-*   **IDEmpleado:** Número de identificación del trabajador (puede ser su DNI). *Dominio:* Cadena de texto de 9 caracteres. (Ej: `12345678A`).
+*   **IDEmpleado:** Número de identificación del trabajador (puede ser su DNI). *Dominio:* Cadena de texto de 9 caracteres.
 
 **Entidad: Cliente**
-*   **IDCliente:** Identificador único del comprador. *Dominio:* Cadena de texto (DNI) o número entero. (Ej: `CLI-005`).
+*   **IDCliente:** Identificador único del comprador. *Dominio:* Cadena de texto (DNI) o número entero.
 *   **FechaAlta:** Día en el que el cliente se registró. *Dominio:* Fecha en formato DD/MM/AAAA. (Ej: `15/03/2025`).
 *   **TajinastePlus:** Indica si pertenece al programa de fidelización. *Dominio:* Booleano (Verdadero/Falso). (Ej: `True`).
 *   **NumCompras:** Volumen de compras o número de pedidos realizados. *Dominio:* Número entero positivo. (Ej: `12`).
@@ -40,4 +39,5 @@ PRUEBAcat << 'EOF' > Readme.md
 
 **Atributos en las Relaciones**
 *   **StockDisponible** *(en la relación Asignado)*: Cantidad de un producto que hay en una zona concreta. *Dominio:* Número entero mayor o igual a cero. (Ej: `150`).
-*   **EpocaAnio** *(en la relación Histórico entre Empleado y Zona)*: Temporada en la que el empleado trabajó en esa zona. *Dominio:* Cadena de texto descriptiva. (Ej: `Primavera` o `Campaña Na
+*   **EpocaAnio** *(en la relación entre Empleado y Zona)*: Temporada en la que el empleado trabajó en esa zona. *Dominio:* Cadena de texto descriptiva. (Ej: `Primavera` o `Campaña Navidad`).
+*   **Puesto** *(en la relación Histórico)*: La tarea específica desempeñada. *Dominio:* Cadena de texto. (Ej: `Mozo de almacén` o `Atención al cliente`).
